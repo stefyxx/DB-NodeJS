@@ -1,0 +1,22 @@
+{
+  "name": "db_et_nodejs",
+  "version": "1.0.0",
+  "description": "come legarsi a DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefyxx/DB-NodeJS.git"
+  },
+  "author": "Stefania",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefyxx/DB-NodeJS/issues"
+  },
+  "homepage": "https://github.com/stefyxx/DB-NodeJS#readme",
+  "dependencies": {
+    "pg": "^8.8.0"
+  }
+}
