@@ -1,13 +1,6 @@
-//import { configuration } from "./config";
-//module.exports = require('./config.js')
+import { configuration } from "./config";
+module.exports = require('./config.js')
 
-/*const configuration ={
-    PGHOST :'http://staging-readonly1-do-user-211558-0.b.db.ondigitalocean.com/',
-    PGUSER :process.env.USER , //gis
-    PGPASSWORD : gis,     //null or secretpassword,
-    PGDATABASE : gis,     //process.env.USER or 'mydb'
-    PGPORT : 3211,         //5432 3211
-}*/
 // 1-Collegare node.js al server PostgreSQL:
 const { Pool, Client } = require('pg');
 const connectionString = 'postgresql://doadmin:@staging-readonly1-do-user-211558-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require';
@@ -18,7 +11,8 @@ const pool = new Pool({
     host: configuration.PGHOST,
     database: configuration.PGDATABASE,
     password: configuration.PGPASSWORD,
-    port: configuration.port,*/
+    port: configuration.port,
+    ssl: configuration.PGSTRICT*/
     connectionString,
 })
 pool.query('SELECT NOW()', (err, res) => {
@@ -32,7 +26,8 @@ const client = new Client({
     host: configuration.PGHOST,
     database: configuration.PGDATABASE,
     password: configuration.PGPASSWORD,
-    port: configuration.port,*/
+    port: configuration.port,
+    ssl: configuration.PGSTRICT*/
     connectionString,
     
 })

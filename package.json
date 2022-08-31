@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "come legarsi a DB",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/stefyxx/DB-NodeJS#readme",
   "dependencies": {
+    "esm": "^3.2.25",
+    "mjs": "^1.0.0",
     "pg": "^8.8.0"
   }
 }

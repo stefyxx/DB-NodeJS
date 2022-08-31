@@ -8,7 +8,10 @@ const main = async (app) => {
         host: 'staging-readonly1-do-user-211558-0.b.db.ondigitalocean.com',
         database: 'gis',
         password: 'gis',
-        port: 5432
+        port: 25060,
+        ssl: {
+            rejectUnauthorized: false,
+        }
     })
     await client.connect();
     console.log('I am');
@@ -23,3 +26,6 @@ const mainConnectionDB = {
 mainConnectionDB
 
 
+/*
+
+*/
