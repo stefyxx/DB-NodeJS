@@ -18,13 +18,7 @@ const main = async (app) => {
     await client.end();
 };
 
-const mainConnectionDB = {
-    name: 'myConnectionDB',
-    program: main,
-};
-
-mainConnectionDB
-
+main();
 
 /*
 
