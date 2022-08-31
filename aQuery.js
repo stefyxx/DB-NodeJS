@@ -47,3 +47,5 @@ export const aQuery = "SELECT \"id\",\"name\",\"location\",\"locationType\" FROM
 
 //export const aQuery = "SELECT * FROM \"gtfsStops\" JOIN \"gtfsRoutes\" ON \"gtfsStops.locationType\" = \"gtfsRoutes.type\" LIMIT 10"; 
 //export const aQuery = "SELECT \"locationType\" FROM \"gtfsStops\" LIMIT 10"; 
+
+//GTFS Routes > GTFS Trips > GTFS Stoptimes > GTFS stops

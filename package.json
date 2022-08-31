@@ -19,7 +19,6 @@
   "homepage": "https://github.com/stefyxx/DB-NodeJS#readme",
   "dependencies": {
     "esm": "^3.2.25",
-    "mjs": "^1.0.0",
     "pg": "^8.8.0"
   }
 }
