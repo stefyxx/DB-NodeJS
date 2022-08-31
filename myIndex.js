@@ -25,10 +25,10 @@ function ProcessData(query) {
     myConnection(query)
     .then(function success(result) {
         // key rows : [{},{},..]
-        //console.log(result.rows)
+        console.log(result.rows)
         const res= result.rows;
-        console.log(res);
-        if(res){
+        //console.log(res);
+        /*if(res){
 
             res.forEach(element => {
                 const myObj = {
@@ -43,7 +43,7 @@ function ProcessData(query) {
             myArray.forEach(el=>{
                 console.log(el.myLocation)
             })
-        }
+        }*/
         
     })
     .catch(function error(err) {

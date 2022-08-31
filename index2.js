@@ -5,7 +5,8 @@ module.exports = require('./config.js')
 const { Pool, Client } = require('pg');
 const connectionString = 'postgresql://doadmin:@staging-readonly1-do-user-211558-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require';
 
-
+//Pool mi permette di fare piu' richieste contemporaneamente alla DB
+//Client fa una richiesta alla volta
 const pool = new Pool({
     /*user: configuration.PGUSER,
     host: configuration.PGHOST,
