@@ -96,4 +96,16 @@ ex: SELECT * FROM "gtfsRoutes" WHERE "agencyId" = 'delijn' LIMIT 10
     entityType: 'GtfsStopTime'*/ 
 //export const aQuery = "SELECT * FROM \"gtfsStopTimes\" LIMIT 10";
 
-export const aQuery = "SELECT * FROM \"gtfsTrips\" JOIN \"gtfsStopTimes\" ON \"gtfsTrips\".\"id\" = \"gtfsStopTimes\".\"stopId\" WHERE \"gtfsStopTimes\".\"agencyId\" = 'stibmivb' LIMIT 10";
+//export const aQuery = "SELECT * FROM \"gtfsStopTimes\" JOIN \"gtfsTrips\" ON \"gtfsTrips\".\"id\" = \"gtfsStopTimes\".\"tripId\"  WHERE \"gtfsTrips\".\"agencyId\" = 'delijn' LIMIT 10";
+
+    //3) GTFS StopTimes > GTFS stops
+//export const aQuery = "SELECT * FROM \"gtfsStops\" WHERE \"agencyId\" = 'stibmivb' LIMIT 10";
+//export const aQuery = "SELECT \"id\",\"name\",\"location\",\"locationType\" FROM \"gtfsStops\"WHERE \"agencyId\" = 'stibmivb' LIMIT 10"; 
+//export const aQuery = "SELECT * FROM \"gtfsStops\" JOIN \"gtfsStopTimes\" ON \"gtfsStops\".\"id\" = \"gtfsStopTimes\".\"stopId\" WHERE \"gtfsStopTimes\".\"agencyId\" = 'stibmivb' LIMIT 10";
+
+//GTFS Routes > GTFS Trips > GTFS StopTimes > GTFS stops
+export const aQuery = "SELECT \"gtfsRoutes\".\"id\" AS \"routeID\",\"gtfsRoutes\".\"shortName\",\"gtfsRoutes\".\"longName\",\"gtfsStops\".\"id\" AS \"stopID\",\"gtfsStops\".\"name\",\"gtfsStops\".\"locationType\" FROM \"gtfsRoutes\" LEFT JOIN \"gtfsTrips\" ON \"gtfsTrips\".\"routeId\" = \"gtfsRoutes\".\"id\" LEFT JOIN \"gtfsStopTimes\" ON \"gtfsTrips\".\"id\" = \"gtfsStopTimes\".\"tripId\" LEFT JOIN \"gtfsStops\" ON \"gtfsStops\".\"id\" = \"gtfsStopTimes\".\"stopId\" LIMIT 10";
+
+//WHERE \"gtfsRoutes\".\"name\" ='LEMONNIER'
+
+
